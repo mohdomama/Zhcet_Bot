@@ -185,8 +185,7 @@ def text_message_response(text_data,user_id):
             data = json.loads(responseurl.read().decode())
 
             message_response =  make_string_list(data,0)
-            result_input= [] //to be removed
-            string_list=['']
+            
 
         else:
             message_response='I can fetch result if the keywords <result>, <faculty_number>, <enrollment_number> are there in your message!. '
@@ -200,30 +199,14 @@ def text_message_response(text_data,user_id):
 
     else:
         message_response=text_data
-    result_input= [] //to be removed
-    string_list=['']
+
     return message_response
 
 
-def make_string(data,indent):           //to be removed
-    global string
-    for key,value in data.items():
-        if isinstance(value,list):
-            for i in value:
-                make_string(i,1)
-                string=string+r'\n'
-        else:
-            if indent==1:
-                string=string+r'\n'+r'\t'+str(key)+' : '+str(value)
-            else:
-                string=string+r'\n'+str(key)+' : '+str(value)
-
-    return string
 
 
 
-
-def make_string_list(data,indent):          //improve this codes
+def make_string_list(data,indent):          #improve this codes
     global string_list
     for key,value in data.items():
         if isinstance(value,list):
