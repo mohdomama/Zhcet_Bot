@@ -18,3 +18,7 @@ As a default reply, the bot replies with the same message you send to it.
 2. Document the code.
 3. Minimise the use of global variables.
 4. Introduce AI using and machine learning.
+
+#### Special thanks to :
+[@iamareebjamal](https://github.com/iamareebjamal) for providing the [result-fetching api](https://github.com/iamareebjamal/ctengg-api).
+All credits to him!
